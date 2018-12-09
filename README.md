@@ -21,9 +21,9 @@ In summary, we take a content image, a style image, and a generated image (initi
 
 For style transfer, we need to identify the intermediate layers whose output we will use for calculating our content and style loss functions. This was a bit more challenging than when using a VGG16 or VGG19 network.  Below a bit of guidance:
 
-  **For content layers:** Generally, one layer for content seems to work fine.
+* **For content layers:** Generally, one layer for content seems to work fine.
   
-  **For style layers:** Identify the layers that work best for style transfer. I started using a single style layer to see if that layer, after running say 500 iteration, would translate any stlyle to the generated image, and if so how apealing that style was. After doing this with several layers I selected the ones I liked best. The more layers are selected the longer it takes the optimization to run. For this example we use 4 style layers.
+* **For style layers:** Identify the layers that work best for style transfer. I started using a single style layer to see if that layer, after running say 500 iteration, would translate any stlyle to the generated image, and if so how apealing that style was. After doing this with several layers I selected the ones I liked best. The more layers are selected the longer it takes the optimization to run. For this example we use 4 style layers.
   
 Please note that when layer 'conv1' was included as a style layer, it dominated the optimization leading to a generated image that had all the colors of the style image but none of the distinctive patterns. For this reason, it is left out in the code block below. This may be useful if there is an application where we want to tranfer the color only.
 
