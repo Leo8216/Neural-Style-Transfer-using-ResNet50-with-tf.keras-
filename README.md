@@ -1,6 +1,8 @@
 # Neural Style Transfer using ResNet50 with tf.keras
 #### December 9th, 2018
 #### By: Leo Barbosa 
+
+https://www.kaggle.com/lbarbosa/neural-style-transfer-using-resnet50-with-tf-keras
 ---
 
 After doing a bit of research on neural style transfer, I noticed that it was always implemented using pre-trainned VGG16 or VGG19.  I was curious to see what it would look like if implemented using a different deep convolutional neural network (DCNN). I reviewed the 2015 paper, [A Neural Algorithm of Artistic Style](https://arxiv.org/abs/1508.06576), one more time and I did not find anything indicating this could not be done using a different DCNN. So, I went ahead and implemented neural style transfer using a pre-trained ResNet50 http://ethereon.github.io/netscope/#/gist/db945b393d40bfa26006. Why ResNet50?  I wanted to explore a structure that was proven to be great for image classification, and ResNet152 (deeper model with 152 layers instead of 50) won the 2015 ImageNet challenge with a top-5 error rate of 3.57%.
